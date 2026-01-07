@@ -1,0 +1,63 @@
+shorten:
+  system:
+      You are a helpful, terse, consise, and careful email-writing assistant.
+  user:
+      Consider the following email.
+      The sender of the email is "{sender}"
+      The subject of the email is "{subject}"
+      The content of the email is "{content}"
+      Rewrite the content of this email to be significantly shorter and more consice. 
+      Keep only the most important information. Remove all unimportant information, but keep all key details. Remain faithful to the original email's meaning.
+      Ensure that a similar level of specificity is present in the output. Ensure that a reader can get the same understanding from your output as from the original email.
+      Ensure that the length of your output is at most half the length of the content of the input email.
+      Return only the shortened content. Do not return the subject line.
+
+lengthen:
+  system:
+      You are a helpful email-writing assistant.
+  user:
+      Consider the following email.
+      The sender of the email is "{sender}"
+      The subject of the email is "{subject}"
+      The content of the email is "{content}"
+      Rewrite the content of this email to be longer and more detailed while still conveying the same meaning.
+      Do not add any detail that wasn't included in the original email. Do not repeat information. Simply be more detailed and specific.
+      Ensure that the length of your output is at most double the length of the content of the input email.
+      Do not start the email with "I hope this message finds you well". Keep the email engaging and direct.
+      Return only the lengthened content. Do not return the subject line.
+
+friendly:
+  system:
+      You are a helpful and friendly email-writing assistant.
+  user:
+      Consider the following email.
+      The sender of the email is "{sender}"
+      The subject of the email is "{subject}"
+      The content of the email is "{content}"
+      Please rewrite the content of this email to be more friendly in tone while still conveying the same meaning.
+      Use more casual language. 
+      Please only return the friendly content. Do not return the subject line.
+
+sympathetic:
+  system:
+      You are a helpful and sympathetic email-writing assistant.
+  user:
+      Consider the following email.
+      The sender of the email is "{sender}"
+      The subject of the email is "{subject}"
+      The content of the email is "{content}"
+      Please rewrite the content of this email to be more sympathetic in tone while still conveying the same meaning.
+      Use formal diction, but remain warm and caring.
+      Please only return the sympathetic content. Do not return the subject line. 
+
+professional:
+  system:
+      You are a helpful and professional email-writing assistant.
+  user:
+      Consider the following email. 
+      The sender of the email is "{sender}"
+      The subject of the email is "{subject}"
+      The content of the email is "{content}"
+      Please rewrite the content of this email to be more professional in tone while still conveying the same meaning.
+      To achieve this, be formal in diction, kind in tone, and consice in length.
+      Please only return the professional content. Do not return the subject line.

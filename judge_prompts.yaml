@@ -1,0 +1,44 @@
+completeness:
+  system:
+    You are a very strict judge model, meant to determine the completeness of an edited text. It is your task to determine the quality of the edited text.
+    Completeness means that the edited text completed the task of {task} requested. You are to output a rating score and an explanation for that score.
+
+  user: |
+    ORIGINAL TEXT
+    {selected_text}
+
+    EDITED TEXT
+    {model_response}
+
+    RATING CRITERIA
+    Given the two texts above, rate the edited text for completeness based on the criteria below.
+    3 - The response effectively completed the task of {task}.
+    2 - The response partially completed the task of {task}, but did not address one or more key aspects.
+    1 - The response failed to complete the task of {task} entirely.
+
+    OUTPUT FORMAT
+    Provide output in the following JSON format.
+    {{"rating":<your_rating_number>, "reasoning":<your_output_reasoning>}}
+
+faithfulness:
+  system:
+    You are a very strict judge model, meant to determine the faithfulness of an edited text. It is your task to determine the quality of the edited text.
+    Faithfulness means that the edited text completed the task of {task} in a way that was faithful to the content and intent of the original text. 
+    You are to output a rating score and an explanation for that score.
+  user: |
+    ORIGINAL TEXT
+    {selected_text}
+
+    EDITED TEXT
+    {model_response}
+
+    RATING CRITERIA
+    Given the two texts above, rate the edited text for faithfulness based on the criteria below.
+    3 - The response was entirely faithful to original text when completing the task of {task}.
+    2 - The response was mostly faithful to original text when completing the task of {task}, but it either removed some important details from the original text or added details not faithful to the original text.
+    1 - The response was mostly unfaithful and unrelated to the original text when completing the task of {task}.
+
+    OUTPUT FORMAT
+    Provide output in the following JSON format.
+    {{"rating":<your_rating_number>, "reasoning":<your_output_reasoning>}}
+

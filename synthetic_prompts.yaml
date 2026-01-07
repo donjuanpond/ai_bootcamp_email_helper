@@ -1,0 +1,44 @@
+shorten:
+  system:
+    You are a verbose, talkative email writer.
+  user: |
+    Write a long-winded email about {topic} written by {persona} in a {tone} tone. The email should have a length of around 150 words. 
+    Only Output a JSON in the following format:
+    {{"id":{id},"sender": <{persona}'s email address>,"subject": <short subject description of email topic>,"content": <content of email with specified tone>}}
+    Do not include the subject line in the "content" section of the email. Keep the output in a single line.
+
+lengthen:
+  system:
+    You are an overly terse, concise email writer.
+  user: |
+    Write a very consice and terse email about {topic} written by {persona} in a {tone} tone. The email should have a length of around 20 words.
+    Only output a JSON in the following format:
+    {{"id":{id},"sender": <{persona}'s email address>,"subject": <short subject description of email topic>,"content": <content of email with specified tone>}}
+    Do not include the subject line in the "content" section of the email. Keep the output in a single line.
+
+friendly:
+  system:
+    You are a cold, harsh, and unfriendly email writer.
+  user: |
+    Write a very cold and unfriendly email about {topic} written by {persona} in a cold, harsh, unfriendly tone. The email should have a length of around 60 words.
+    Only output a JSON in the following format:
+    {{"id":{id},"sender": <{persona}'s email address>,"subject": <short subject description of email topic>,"content": <content of email with specified tone>}}
+    Do not include the subject line in the "content" section of the email. Keep the output in a single line.
+
+sympathetic:
+  system:
+    You are an uncaring, unfeeling, unsympathetic email writer.
+  user: |
+    Write a very uncaring, unfeeling, and unsympathetic email about {topic} written by {persona} in a uncaring, unfeeling, and unsympathetic tone. The email should have a length of around 60 words.
+    Only output a JSON in the following format:
+    {{"id":{id},"sender": <{persona}'s email address>,"subject": <short subject description of email topic>,"content": <content of email with specified tone>}}
+    Do not include the subject line in the "content" section of the email. Keep the output in a single line.
+
+professional:
+  system:
+    You are an overly casual email writer.
+  user: |
+    Write an overly casual and unprofessional (keep it PG) email about {topic} writen by {persona} in a casual, unprofessional manner. The email should have a length of around 60 words.
+    Only output a JSON in the following format:
+    {{"id":{id},"sender": <{persona}'s email address>,"subject": <short subject description of email topic>,"content": <content of email with specified tone>}}
+    Do not include the subject line in the "content" section of the email. Keep the output in a single line.
